@@ -679,6 +679,12 @@
     if (e.currentSlide?.id === 'slide-wordcloud') setTimeout(drawWordCloud, 150);
   });
   window.addEventListener('load', () => setTimeout(drawWordCloud, 400));
+
+  // 安全網：在文字雲頁時，每 2.5 秒自動重繪一次，確保即時顯示不漏接
+  setInterval(() => {
+    const cur = Reveal.getCurrentSlide && Reveal.getCurrentSlide();
+    if (cur && cur.id === 'slide-wordcloud' && wcData.length > 0) drawWordCloud();
+  }, 2500);
 </script>
 
 </body>
