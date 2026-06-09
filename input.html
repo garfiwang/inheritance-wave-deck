@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>大繼承潮 · 現場互動輸入</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    :root{ --cream:#F9F5F0; --brown:#3E2115; --brown-light:#A47551; --gold:#FFD700; --gold-deep:#C9A227; --crimson:#CF202E; }
+    *{ box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+    body{ margin:0; min-height:100vh; background:var(--cream); color:var(--brown);
+      font-family:'Noto Sans TC','PingFang TC',sans-serif; display:flex; flex-direction:column;
+      align-items:center; padding:26px 20px 40px; }
+    .brand{ font-size:13px; letter-spacing:0.1em; color:var(--brown); background:rgba(255,215,0,0.25);
+      padding:5px 14px; border-radius:20px; font-weight:700; }
+    h1{ font-family:'Noto Serif TC',serif; font-size:23px; line-height:1.5; text-align:center;
+      margin:18px 0 4px; font-weight:900; }
+    h1 b{ color:var(--gold-deep); }
+    .sub{ font-size:14px; color:var(--brown-light); text-align:center; margin-bottom:22px; font-weight:500; }
+    .card{ width:100%; max-width:420px; background:#fff; border-radius:18px; padding:22px;
+      box-shadow:0 12px 36px rgba(62,33,21,0.1); }
+    label{ font-size:13px; color:var(--gold-deep); font-weight:900; display:block; margin-bottom:8px; }
+    input{ width:100%; padding:15px 16px; font-size:17px; border:2px solid rgba(62,33,21,0.18);
+      border-radius:12px; background:var(--cream); color:var(--brown); outline:none; font-family:inherit; }
+    input:focus{ border-color:var(--gold-deep); }
+    button{ width:100%; margin-top:14px; padding:16px; font-size:18px; font-weight:900;
+      background:var(--gold); color:var(--brown); border:none; border-radius:12px; cursor:pointer;
+      box-shadow:0 8px 20px rgba(255,215,0,0.4); transition:transform .1s; }
+    button:active{ transform:scale(0.97); }
+    button:disabled{ opacity:0.5; }
+    .hint{ font-size:12px; color:var(--brown-light); text-align:center; margin-top:14px; line-height:1.7; }
+    .ok{ margin-top:18px; padding:16px; border-radius:12px; background:rgba(129,199,132,0.18);
+      border:1px solid rgba(76,154,80,0.4); color:#2e6b32; font-weight:700; font-size:15px;
+      text-align:center; display:none; }
+    .mine{ width:100%; max-width:420px; margin-top:22px; }
+    .mine-h{ font-size:13px; color:var(--brown-light); font-weight:700; margin-bottom:8px; }
+    .chip{ display:inline-block; background:#fff; border:1px solid rgba(62,33,21,0.12);
+      border-radius:16px; padding:7px 14px; font-size:14px; margin:0 6px 8px 0; font-weight:500;
+      box-shadow:0 3px 10px rgba(62,33,21,0.05); }
+    .foot{ margin-top:30px; font-size:12px; color:var(--brown-light); text-align:center; }
+    .foot b{ color:var(--gold-deep); }
+  </style>
+</head>
+<body>
+  <div class="brand">問大師家族辦公室 · 現場互動</div>
+  <h1>說到把財產留給家人，<br>您第一個浮現的<b>擔心</b>是什麼？</h1>
+  <div class="sub">輸入幾個字，立刻出現在大螢幕上 ✨</div>
+
+  <div class="card">
+    <label for="word">您的答案（最多 16 字）</label>
+    <input id="word" type="text" inputmode="text" maxlength="16" placeholder="例如：子女爭產、稅太重、被詐騙…" autocomplete="off" />
+    <button id="send">送出到大螢幕 →</button>
+    <div class="hint">可以多送幾個！每送一次就多一筆。</div>
+    <div class="ok" id="ok">✅ 已送出！抬頭看看大螢幕</div>
+  </div>
+
+  <div class="mine">
+    <div class="mine-h">我送出的：</div>
+    <div id="mine-list"><span class="chip" style="opacity:.5;">尚未送出</span></div>
+  </div>
+
+  <div class="foot">問大師家族辦公室 · RICH 王執定<br>把愛，安全地傳下去 · <b>人總會老，但要過的好！</b></div>
+
+<script type="module">
+  import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js';
+  import { getFirestore, collection, addDoc, serverTimestamp }
+    from 'https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js';
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDm-7e03agolHnmr0YEMZQzv--bPb-woDc",
+    authDomain: "garfiwang-project.firebaseapp.com",
+    projectId: "garfiwang-project",
+    storageBucket: "garfiwang-project.firebasestorage.app",
+    messagingSenderId: "995556927807",
+    appId: "1:995556927807:web:363ce5c3d0f58bdcbecb8a"
+  };
+  const app = initializeApp(firebaseConfig);
+  const fdb = getFirestore(app);
+  const wordsRef = collection(fdb, 'inheritance_wave_wordcloud');
+
+  const input = document.getElementById('word');
+  const btn = document.getElementById('send');
+  const ok = document.getElementById('ok');
+  const mineList = document.getElementById('mine-list');
+  const mine = [];
+
+  async function submit(){
+    const word = input.value.trim();
+    if(!word) return;
+    btn.disabled = true;
+    try{
+      await addDoc(wordsRef, { word, created_at: serverTimestamp() });
+      mine.push(word);
+      mineList.innerHTML = mine.map(w=>`<span class="chip">${w}</span>`).join('');
+      input.value = '';
+      ok.style.display = 'block';
+      setTimeout(()=> ok.style.display='none', 2200);
+      input.focus();
+    }catch(e){ alert('送出失敗，請再試一次'); console.error(e); }
+    finally{ btn.disabled = false; }
+  }
+  btn.addEventListener('click', submit);
+  input.addEventListener('keypress', e=>{ if(e.key==='Enter') submit(); });
+</script>
+</body>
+</html>

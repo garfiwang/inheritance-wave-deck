@@ -167,18 +167,85 @@
     .end h1 { font-size: 2.1em; color: var(--cream); }
     .end .end-sub { color: var(--gold); font-size: 0.6em; font-weight: 700; margin-top: 0.3em; }
     .contact-card {
-      display: inline-flex; gap: 28px; align-items: center; background: rgba(249,245,240,0.95);
-      border-radius: 18px; padding: 22px 30px; margin-top: 1.2em; box-shadow: 0 14px 40px rgba(0,0,0,0.3);
+      display: inline-flex; gap: 42px; align-items: center; background: rgba(249,245,240,0.97);
+      border-radius: 22px; padding: 34px 46px; margin-top: 1.1em; box-shadow: 0 16px 46px rgba(0,0,0,0.32);
     }
     .qr-box {
-      width: 130px; height: 130px; background: #fff; border-radius: 12px; border: 2px dashed var(--brown-light);
+      width: 240px; height: 240px; background: #fff; border-radius: 14px; border: 2px dashed var(--brown-light);
       display: flex; align-items: center; justify-content: center; text-align: center;
-      font-size: 0.32em; color: var(--brown-light); font-weight: 700; line-height: 1.5;
+      font-size: 0.4em; color: var(--brown-light); font-weight: 700; line-height: 1.5;
+      overflow: hidden; padding: 8px;
     }
+    .qr-box img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+    /* === 商周封面跨頁 === */
+    .mag-spread { display:flex; gap:20px; justify-content:center; align-items:center; height:560px; }
+    .mag-spread img { height:100%; width:auto; max-width:46%; object-fit:contain; border-radius:8px;
+      box-shadow:0 20px 55px rgba(0,0,0,0.5); }
+    .mag-cap { text-align:center; color:var(--cream); font-size:0.4em; margin-top:0.7em; font-weight:500; opacity:0.85; }
+
+    /* === 文字雲掃碼面板 === */
+    .wc-qr-panel { display:flex !important; flex-direction:row !important; align-items:center; gap:12px; padding:12px 14px !important; }
+    .wc-qr-panel img { width:84px; height:84px; flex:0 0 84px; border-radius:8px; display:block; }
+    .wc-qr-text { font-size:0.36em; font-weight:900; color:var(--brown); line-height:1.55; }
+    .wc-qr-text b { color:var(--crimson); }
+    /* 放大版 QR 面板 */
+    .wc-qr-big { background:#fff; border:1px solid rgba(62,33,21,0.1); border-radius:16px;
+      box-shadow:0 8px 24px rgba(62,33,21,0.07); display:flex; flex-direction:column;
+      align-items:center; justify-content:center; padding:22px; gap:14px; }
+    .wc-qr-big img { width:300px; height:300px; max-width:88%; border-radius:10px; display:block; }
+    .wc-qr-big-text { font-size:0.5em; font-weight:900; color:var(--brown); text-align:center; line-height:1.5; }
+    .wc-qr-big-text b { color:var(--crimson); }
+    .wc-counter { font-size:0.34em; font-weight:700; color:var(--brown-light); text-align:center; }
+    .wc-counter span[id] { color:var(--gold-deep); font-weight:900; }
+
+    /* === 民法修法對照表 === */
+    .law-table { width:100%; border-collapse:separate; border-spacing:0; margin-top:0.4em;
+      font-size:0.3em; box-shadow:0 10px 30px rgba(62,33,21,0.08); border-radius:10px; overflow:hidden; }
+    .law-table th { background:var(--brown); color:var(--gold); padding:9px 11px; font-weight:900;
+      font-family:'Noto Serif TC',serif; text-align:left; }
+    .law-table td { padding:8px 11px; border-bottom:1px solid rgba(62,33,21,0.1);
+      vertical-align:top; line-height:1.55; background:#fff; }
+    .law-table tr:last-child td { border-bottom:none; }
+    .law-art { font-weight:900; color:var(--brown); white-space:nowrap; }
+    .law-art small { display:block; color:var(--brown-light); font-weight:700; font-size:0.86em; margin-top:3px; white-space:normal; }
+    .law-before { color:var(--brown-light); }
+    .law-after { color:var(--brown); }
+    .law-after b { color:var(--gold-deep); }
+    .law-new { display:inline-block; background:var(--crimson); color:#fff; font-size:0.82em;
+      padding:1px 6px; border-radius:8px; margin-left:4px; font-weight:700; vertical-align:middle; }
+    .law-col-art { width:20%; } .law-col-before { width:36%; } .law-col-after { width:44%; }
+
+    /* === 單條法案頁（大字版）=== */
+    .law-head { display:flex; align-items:center; gap:16px; margin-bottom:0.1em; }
+    .law-badge { background:var(--brown); color:var(--gold); font-family:'Noto Serif TC',serif;
+      font-weight:900; font-size:0.5em; padding:8px 18px; border-radius:14px; white-space:nowrap; }
+    .law-new2 { display:inline-block; background:var(--crimson); color:#fff; font-size:0.34em;
+      padding:3px 12px; border-radius:14px; font-weight:700; vertical-align:middle; }
+    .law-one { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:0.55em; align-items:stretch; }
+    .lo-card { background:#fff; border-radius:18px; padding:28px 30px; box-shadow:0 12px 34px rgba(62,33,21,0.09);
+      display:flex; flex-direction:column; }
+    .lo-before { border-top:7px solid var(--brown-light); }
+    .lo-after  { border-top:7px solid var(--gold); }
+    .lo-tag { font-size:0.44em; font-weight:900; letter-spacing:0.04em; margin-bottom:14px; }
+    .lo-before .lo-tag { color:var(--brown-light); }
+    .lo-after  .lo-tag { color:var(--gold-deep); }
+    .lo-text { font-size:0.52em; line-height:1.75; color:var(--brown); font-weight:500; }
+    .lo-text.muted { color:var(--brown-light); font-style:italic; }
+    .lo-after .lo-text b { color:var(--gold-deep); font-weight:900; }
+    .law-plain { margin-top:0.6em; background:var(--brown); color:var(--cream); border-radius:14px;
+      padding:16px 24px; font-size:0.5em; font-weight:700; line-height:1.6; }
+    .law-plain b { color:var(--gold); }
+
+    /* === 影片嵌入 === */
+    .video-wrap { position:relative; width:100%; max-width:880px; margin:0.5em auto 0;
+      aspect-ratio:16/9; border-radius:16px; overflow:hidden; box-shadow:0 20px 55px rgba(0,0,0,0.45);
+      background:#000; }
+    .video-wrap iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
     .contact-info { text-align: left; }
-    .contact-info .ci-name { font-size: 0.62em; font-weight: 900; color: var(--brown); font-family: 'Noto Serif TC', serif; }
-    .contact-info .ci-title { font-size: 0.36em; color: var(--brown-light); font-weight: 700; margin: 4px 0 10px; }
-    .contact-info .ci-row { font-size: 0.36em; color: var(--brown); margin: 5px 0; font-weight: 500; }
+    .contact-info .ci-name { font-size: 0.95em; font-weight: 900; color: var(--brown); font-family: 'Noto Serif TC', serif; }
+    .contact-info .ci-title { font-size: 0.5em; color: var(--brown-light); font-weight: 700; margin: 8px 0 16px; }
+    .contact-info .ci-row { font-size: 0.56em; color: var(--brown); margin: 10px 0; font-weight: 500; }
     .contact-info .ci-row b { color: var(--gold-deep); }
 
     /* === 文字雲（亮色版覆寫）=== */
@@ -217,34 +284,14 @@
       </div>
     </section>
 
-    <!-- ===== P2 文字雲破冰 ===== -->
-    <section id="slide-wordcloud" data-background-color="#F9F5F0">
-      <div class="kicker">現場互動 · 一起說出心裡話</div>
-      <h2 class="wc-q">說到「把財產留給家人」，您第一個浮現的<span style="color:var(--gold-deep)">擔心</span>是什麼？</h2>
-      <div class="wc-wrap">
-        <div style="display:flex; flex-direction:column; gap:12px;">
-          <div class="wc-panel">
-            <div class="wc-h">輸入您的答案</div>
-            <input id="wc-input" type="text" placeholder="例如：子女爭產、稅太重…" maxlength="16" />
-            <button id="wc-btn">送出 ↵</button>
-          </div>
-          <div class="wc-panel" style="flex:1; display:flex; flex-direction:column; overflow:hidden;">
-            <div class="wc-h">大家最擔心的 <span class="live-tag">LIVE</span></div>
-            <div id="wc-list"></div>
-            <div style="margin-top:8px; font-size:0.32em; color:var(--brown-light); border-top:1px solid rgba(62,33,21,0.1); padding-top:6px;">
-              總提交 <span id="wc-total" style="color:var(--gold-deep); font-weight:900;">0</span>
-              不同答案 <span id="wc-unique" style="color:var(--gold-deep); font-weight:900;">0</span>
-            </div>
-          </div>
-        </div>
-        <div class="wc-canvas-wrap">
-          <canvas id="wc-canvas" style="width:100%; height:100%; display:block;"></canvas>
-          <div id="wc-empty" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-               color:var(--brown-light); font-size:0.42em; text-align:center; pointer-events:none; line-height:2;">
-            輸入第一個答案<br>大家的擔心就會浮現 ✨
-          </div>
-        </div>
+    <!-- ===== P2 商周封面故事跨頁 ===== -->
+    <section data-background-color="#3E2115">
+      <div class="kicker" style="background:var(--gold); color:var(--brown);">封面故事 · 商業週刊</div>
+      <div class="mag-spread">
+        <img src="images/IMG_0287.JPG" alt="台灣史上最大 1年遺產比冰島GDP多 大繼承">
+        <img src="images/IMG_0286.JPG" alt="財富轉移潮 3間轉手屋1間是繼承 潮來襲">
       </div>
+      <p class="mag-cap">「財富轉移潮，潮來襲！」── 台灣史上最大的一場「大繼承」，正在發生</p>
     </section>
 
     <!-- ===== P3 一個驚人數字 ===== -->
@@ -271,7 +318,33 @@
       <p class="source-note fragment">資料來源：《商業週刊》封面故事</p>
     </section>
 
-    <!-- ===== P4 痛點：以後再說 ===== -->
+    <!-- ===== P4 文字雲破冰（現場掃碼互動）===== -->
+    <section id="slide-wordcloud" data-background-color="#F9F5F0">
+      <div class="kicker">現場互動 · 拿出手機掃碼，一起說出心裡話</div>
+      <h2 class="wc-q">說到「把財產留給家人」，您第一個浮現的<span style="color:var(--gold-deep)">擔心</span>是什麼？</h2>
+      <div class="wc-wrap" style="grid-template-columns:380px 1fr;">
+        <!-- 左：放大版掃碼面板 -->
+        <div class="wc-qr-big">
+          <img src="images/wc_qr.png" alt="掃碼用手機輸入">
+          <div class="wc-qr-big-text">📱 拿出手機<b>掃我</b><br>用手機即時輸入</div>
+          <div class="wc-counter">已收集 <span id="wc-total">0</span> 則 · <span id="wc-unique">0</span> 種擔心 <span class="live-tag">LIVE</span></div>
+        </div>
+        <!-- 右：大文字雲 -->
+        <div class="wc-canvas-wrap">
+          <canvas id="wc-canvas" style="width:100%; height:100%; display:block;"></canvas>
+          <div id="wc-empty" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+               color:var(--brown-light); font-size:0.42em; text-align:center; pointer-events:none; line-height:2;">
+            拿起手機掃左邊 QR<br>大家的擔心就會浮現 ✨
+          </div>
+        </div>
+      </div>
+      <!-- 隱藏元素：保留供 JS 更新，避免報錯 -->
+      <div id="wc-list" style="display:none;"></div>
+      <input id="wc-input" type="hidden" maxlength="16" />
+      <button id="wc-btn" style="display:none;"></button>
+    </section>
+
+    <!-- ===== P5 痛點：以後再說 ===== -->
     <section data-background-color="#F9F5F0">
       <div class="kicker">痛點 · 真正的風險藏在四個字裡</div>
       <div class="quote-box dark">
@@ -280,7 +353,7 @@
       </div>
       <p style="font-size:0.48em; color:var(--brown-light); font-weight:700; margin:0.5em 0 0.3em;">等到「以後再說」變成「來不及」——</p>
       <ul class="pain-list">
-        <li class="fragment">重病、意識不清時，保單會被國稅局質疑、<b>贈與來不及</b>做</li>
+        <li class="fragment">重病、意識不清時，<b>贈與來不及</b>做，<b>遺囑來不及</b>寫</li>
         <li class="fragment">信託簽不了、房子卡在繼承與稅金之間<b>動彈不得</b></li>
         <li class="fragment">家人不是在「規劃」，而是在「<b>補救</b>」——而補救，通常比規劃貴非常多</li>
       </ul>
@@ -304,39 +377,108 @@
         </div>
       </div>
       <div class="quote-box">
-        我們不是在規劃死亡，<br>而是在規劃——當人生走到下半場，<br>還能不能有<b style="color:var(--gold-deep)">尊嚴、有選擇、有掌控權</b>。
+        信託<b style="color:var(--gold-deep)">不會改變</b>你的生活，<br>信託讓你的生活<b style="color:var(--gold-deep)">不會被改變</b>。
       </div>
     </section>
 
-    <!-- ===== P6 真實案例 ===== -->
-    <section data-background-image="images/case.png"
-             data-background-opacity="0.3"
-             data-background-size="cover"
-             data-background-color="#F9F5F0">
-      <div class="kicker">真實案例 · 以為免稅，結果補稅 150 萬</div>
-      <h2 style="margin-bottom:0.5em;">她沒有買錯商品，<br>她錯在「<span style="color:var(--crimson)">時間點</span>」</h2>
-      <div class="flow">
-        <div class="flow-step fragment">
-          <div class="fs-top">媽媽重病住院</div>
-          <div class="fs-num">561 萬</div>
-          <div class="fs-top" style="margin-top:6px;">密集買 5 張儲蓄險<br>受益人全寫女兒</div>
+    <!-- ===== P7-1 第1149條 ===== -->
+    <section data-background-color="#F9F5F0">
+      <div class="kicker">繼承編修法重點 · ① / ⑤</div>
+      <div class="law-head">
+        <span class="law-badge">第 1149 條</span>
+        <h2 style="margin:0;">遺產<span style="color:var(--gold-deep)">酌給</span>制度</h2>
+      </div>
+      <div class="law-one">
+        <div class="lo-card lo-before">
+          <div class="lo-tag">修法前 · 現行規定</div>
+          <div class="lo-text">被繼承人生前繼續扶養之人，應由<b>親屬會議</b>依扶養程度等關係酌給遺產。</div>
         </div>
-        <div class="flow-arrow fragment">→</div>
-        <div class="flow-step fragment">
-          <div class="fs-top">國稅局認定</div>
-          <div class="fs-num" style="color:var(--brown);">實質課稅</div>
-          <div class="fs-top" style="margin-top:6px;">重病投保＋一次大筆保費<br>＋偏儲蓄型</div>
-        </div>
-        <div class="flow-arrow fragment">→</div>
-        <div class="flow-step bad fragment">
-          <div class="fs-top">全數計入遺產</div>
-          <div class="fs-num">補稅 150 萬+</div>
-          <div class="fs-top" style="margin-top:6px;">五百多萬全數課稅</div>
+        <div class="lo-card lo-after">
+          <div class="lo-tag">修法後 · 修正草案</div>
+          <div class="lo-text">改向<b>繼承人或遺產管理人</b>請求；須因被繼承人死亡致<b>生活困難</b>；增訂酌給協議機制；請求權<b>知悉起 2 年、繼承起 5 年</b>消滅。</div>
         </div>
       </div>
-      <div class="quote-box dark fragment" style="margin-top:0.7em; font-size:0.6em;">
-        傳承這件事：<b>越早談，工具越多；越晚談，選擇越少。</b>
+      <div class="law-plain">💡 白話：被扶養的人將來要自己向繼承人請求，<b>而且有時間限制——別拖過 5 年。</b></div>
+    </section>
+
+    <!-- ===== P7-2 第1165條 ===== -->
+    <section data-background-color="#F9F5F0">
+      <div class="kicker">繼承編修法重點 · ② / ⑤</div>
+      <div class="law-head">
+        <span class="law-badge">第 1165 條</span>
+        <h2 style="margin:0;">禁止遺產<span style="color:var(--gold-deep)">分割期間</span></h2>
       </div>
+      <div class="law-one">
+        <div class="lo-card lo-before">
+          <div class="lo-tag">修法前 · 現行規定</div>
+          <div class="lo-text">遺囑禁止遺產分割之效力，<b>以十年為限</b>。</div>
+        </div>
+        <div class="lo-card lo-after">
+          <div class="lo-tag">修法後 · 修正草案</div>
+          <div class="lo-text"><b>縮短為 5 年</b>（現行 10 年），以促進財產有效利用與流通。</div>
+        </div>
+      </div>
+      <div class="law-plain">💡 白話：想用遺囑「鎖住」遺產不分，<b>最多只能鎖 5 年。</b></div>
+    </section>
+
+    <!-- ===== P7-3 第1173條之1 ===== -->
+    <section data-background-color="#F9F5F0">
+      <div class="kicker">繼承編修法重點 · ③ / ⑤</div>
+      <div class="law-head">
+        <span class="law-badge">第 1173 條之 1</span>
+        <h2 style="margin:0;">特別<span style="color:var(--gold-deep)">貢獻</span>分額 <span class="law-new2">新增條文</span></h2>
+      </div>
+      <div class="law-one">
+        <div class="lo-card lo-before">
+          <div class="lo-tag">修法前 · 現行規定</div>
+          <div class="lo-text muted">無明文規定。</div>
+        </div>
+        <div class="lo-card lo-after">
+          <div class="lo-tag">修法後 · 修正草案</div>
+          <div class="lo-text">對被繼承人事業提供勞務、財產給付、療養看護或維持／增加財產有<b>特別貢獻者</b>，貢獻價額<b>先自遺產扣除</b>，再計入該繼承人應繼分。</div>
+        </div>
+      </div>
+      <div class="law-plain">💡 白話：誰真正<b>出錢出力照顧長輩</b>，將來可以先多分一份——孝順看得見。</div>
+    </section>
+
+    <!-- ===== P7-4 第1173條之2 ===== -->
+    <section data-background-color="#F9F5F0">
+      <div class="kicker">繼承編修法重點 · ④ / ⑤</div>
+      <div class="law-head">
+        <span class="law-badge">第 1173 條之 2</span>
+        <h2 style="margin:0;">歸扣與貢獻<span style="color:var(--gold-deep)">適用期限</span> <span class="law-new2">新增條文</span></h2>
+      </div>
+      <div class="law-one">
+        <div class="lo-card lo-before">
+          <div class="lo-tag">修法前 · 現行規定</div>
+          <div class="lo-text muted">無明文規定。</div>
+        </div>
+        <div class="lo-card lo-after">
+          <div class="lo-tag">修法後 · 修正草案</div>
+          <div class="lo-text">自繼承開始<b>逾 5 年</b>之遺產分割，<b>不適用</b>歸扣及特別貢獻規定（有例外情形除外）。</div>
+        </div>
+      </div>
+      <div class="law-plain">💡 白話：拖過 5 年才分，特別貢獻就算不到了——<b>要分，要趁早。</b></div>
+    </section>
+
+    <!-- ===== P7-5 第1223條 ===== -->
+    <section data-background-color="#F9F5F0">
+      <div class="kicker">繼承編修法重點 · ⑤ / ⑤</div>
+      <div class="law-head">
+        <span class="law-badge">第 1223 條</span>
+        <h2 style="margin:0;">刪除<span style="color:var(--crimson)">兄弟姊妹</span>特留分</h2>
+      </div>
+      <div class="law-one">
+        <div class="lo-card lo-before">
+          <div class="lo-tag">修法前 · 現行規定</div>
+          <div class="lo-text">兄弟姊妹享有特留分，額度為其<b>應繼分的 1/3</b>。</div>
+        </div>
+        <div class="lo-card lo-after">
+          <div class="lo-tag">修法後 · 修正草案</div>
+          <div class="lo-text"><b>完全刪除</b>兄弟姊妹特留分（原為應繼分 1/3）；考量現代家庭關係，避免<b>高齡配偶</b>需與兄弟姊妹爭分遺產之不公。</div>
+        </div>
+      </div>
+      <div class="law-plain">💡 白話：兄弟姊妹不再有特留分，財產<b>更能照你的意思留給配偶與子女。</b></div>
     </section>
 
     <!-- ===== P7 財富傳承三道防線 ===== -->
@@ -366,22 +508,18 @@
       <p class="source-note fragment" style="font-size:0.4em; color:var(--brown);">單獨看是冷冰冰的工具；組合起來，就是保護自己、保護家人、也保護財富的<b style="color:var(--gold-deep)">完整系統</b>。</p>
     </section>
 
-    <!-- ===== P8 想像一個畫面 ===== -->
-    <section data-background-image="images/vision.png"
-             data-background-opacity="0.45"
-             data-background-size="cover"
-             data-background-color="#F9F5F0">
-      <div class="cover" style="text-align:left;">
-        <div class="kicker">轉折點 · 請您想像一個畫面</div>
-        <h2 style="font-size:1.2em; line-height:1.5; margin-bottom:0.5em;">
-          有人照顧您、有您指定的人幫您做主、<br>
-          家人之間沒有為了錢翻臉；<br>
-          而子女拿到的，不是一張沉重的稅單，<br>
-          而是一份您安排得<span style="color:var(--gold-deep)">清清楚楚的愛</span>。
-        </h2>
-        <div class="quote-box" style="font-size:0.66em;">
-          信託不是有錢人才需要，<br><b style="color:var(--gold-deep)">而是有責任的人更需要。</b>
-        </div>
+    <!-- ===== P9 想像一個畫面（影片）===== -->
+    <section data-background-color="#3E2115">
+      <div style="text-align:center;">
+        <div class="kicker" style="background:var(--gold); color:var(--brown);">轉折點 · 影片時間</div>
+        <h2 style="color:var(--cream); margin-bottom:0.1em;">請您<span style="color:var(--gold)">想像</span>一個畫面</h2>
+      </div>
+      <div class="video-wrap">
+        <iframe data-autoplay
+          src="https://www.youtube.com/embed/MqFNA2OGFaM?rel=0&modestbranding=1&playsinline=1"
+          title="請您想像一個畫面"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
       </div>
     </section>
 
@@ -420,14 +558,15 @@
         <h1>把愛，安全地傳下去</h1>
         <div class="end-sub">人總會老，但要過的好！</div>
         <div class="contact-card">
-          <div class="qr-box">LINE QR Code<br>（請置入<br>官方連結圖）</div>
+          <div class="qr-box"><img src="images/qr_line.JPG" alt="LINE QR Code"
+               onerror="this.style.display='none';this.parentNode.innerHTML='LINE QR Code<br>（請置入<br>images/qr_line.JPG）';"></div>
           <div class="contact-info">
             <div class="ci-name">RICH 王執定</div>
             <div class="ci-title">問大師家族辦公室　創辦人兼執行長</div>
             <div class="ci-row">家族信託規劃師 · 高齡金融規劃師 · MDRT</div>
-            <div class="ci-row">📞 電話：<b>＿＿＿＿＿＿</b></div>
-            <div class="ci-row">✉️ Email：<b>＿＿＿＿＿＿</b></div>
-            <div class="ci-row">📘 FB：問大師家族辦公室</div>
+            <div class="ci-row">📞 電話：<b>0927-860-882</b></div>
+            <div class="ci-row">✉️ Email：<b>richnews168@gmail.com</b></div>
+            <div class="ci-row">📘 FB：問大師家族辦公室　|　加 LINE 預約諮詢</div>
           </div>
         </div>
       </div>
