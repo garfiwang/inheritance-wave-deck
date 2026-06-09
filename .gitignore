@@ -1,0 +1,4 @@
+_serve.js
+images/_log_*.txt
+images/*_2026*.png
+.DS_Store
