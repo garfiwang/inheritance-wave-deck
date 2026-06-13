@@ -12,33 +12,33 @@
     body{ margin:0; min-height:100vh; background:var(--cream); color:var(--brown);
       font-family:'Noto Sans TC','PingFang TC',sans-serif; display:flex; flex-direction:column;
       align-items:center; padding:26px 20px 40px; }
-    .brand{ font-size:13px; letter-spacing:0.1em; color:var(--brown); background:rgba(255,215,0,0.25);
-      padding:5px 14px; border-radius:20px; font-weight:700; }
-    h1{ font-family:'Noto Serif TC',serif; font-size:23px; line-height:1.5; text-align:center;
+    .brand{ font-size:15px; letter-spacing:0.1em; color:var(--brown); background:rgba(255,215,0,0.25);
+      padding:6px 16px; border-radius:20px; font-weight:700; }
+    h1{ font-family:'Noto Serif TC',serif; font-size:26px; line-height:1.5; text-align:center;
       margin:18px 0 4px; font-weight:900; }
     h1 b{ color:var(--crimson); }
-    .sub{ font-size:14px; color:var(--brown-light); text-align:center; margin-bottom:22px; font-weight:500; }
+    .sub{ font-size:16px; color:var(--brown-light); text-align:center; margin-bottom:22px; font-weight:500; }
     .card{ width:100%; max-width:420px; background:#fff; border-radius:18px; padding:22px;
       box-shadow:0 12px 36px rgba(62,33,21,0.1); }
-    label{ font-size:13px; color:var(--gold-deep); font-weight:900; display:block; margin-bottom:8px; }
-    input{ width:100%; padding:15px 16px; font-size:17px; border:2px solid rgba(62,33,21,0.18);
+    label{ font-size:15px; color:var(--gold-deep); font-weight:900; display:block; margin-bottom:8px; }
+    input{ width:100%; padding:18px 20px; font-size:20px; border:2px solid rgba(62,33,21,0.18);
       border-radius:12px; background:var(--cream); color:var(--brown); outline:none; font-family:inherit; }
     input:focus{ border-color:var(--gold-deep); }
-    button{ width:100%; margin-top:14px; padding:16px; font-size:18px; font-weight:900;
+    button{ width:100%; margin-top:14px; padding:18px; font-size:22px; font-weight:900;
       background:var(--gold); color:var(--brown); border:none; border-radius:12px; cursor:pointer;
       box-shadow:0 8px 20px rgba(255,215,0,0.4); transition:transform .1s; }
     button:active{ transform:scale(0.97); }
     button:disabled{ opacity:0.5; }
-    .hint{ font-size:12px; color:var(--brown-light); text-align:center; margin-top:14px; line-height:1.7; }
+    .hint{ font-size:14px; color:var(--brown-light); text-align:center; margin-top:14px; line-height:1.7; }
     .ok{ margin-top:18px; padding:16px; border-radius:12px; background:rgba(129,199,132,0.18);
-      border:1px solid rgba(76,154,80,0.4); color:#2e6b32; font-weight:700; font-size:15px;
+      border:1px solid rgba(76,154,80,0.4); color:#2e6b32; font-weight:700; font-size:17px;
       text-align:center; display:none; }
     .mine{ width:100%; max-width:420px; margin-top:22px; }
-    .mine-h{ font-size:13px; color:var(--brown-light); font-weight:700; margin-bottom:8px; }
+    .mine-h{ font-size:15px; color:var(--brown-light); font-weight:700; margin-bottom:8px; }
     .chip{ display:inline-block; background:#fff; border:1px solid rgba(62,33,21,0.12);
-      border-radius:16px; padding:7px 14px; font-size:14px; margin:0 6px 8px 0; font-weight:500;
+      border-radius:16px; padding:8px 16px; font-size:16px; margin:0 6px 8px 0; font-weight:500;
       box-shadow:0 3px 10px rgba(62,33,21,0.05); }
-    .foot{ margin-top:30px; font-size:12px; color:var(--brown-light); text-align:center; }
+    .foot{ margin-top:30px; font-size:14px; color:var(--brown-light); text-align:center; }
     .foot b{ color:var(--gold-deep); }
   </style>
 </head>
@@ -51,7 +51,7 @@
     <label for="word">您的答案（最多 16 字）</label>
     <input id="word" type="text" inputmode="text" maxlength="16" placeholder="例如：子女爭產、稅太重、被詐騙…" autocomplete="off" />
     <button id="send">送出到大螢幕 →</button>
-    <div class="hint">可以多送幾個！每送一次就多一筆。</div>
+    <div class="hint">可以重複輸入多個擔心！<br>送出後抬頭看大螢幕，就會出現囉 ✨</div>
     <div class="ok" id="ok">✅ 已送出！抬頭看看大螢幕</div>
   </div>
 

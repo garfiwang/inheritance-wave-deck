@@ -53,9 +53,9 @@
       display: inline-block;
       background: var(--brown);
       color: var(--gold);
-      padding: 5px 16px;
+      padding: 6px 18px;
       border-radius: 22px;
-      font-size: 0.42em;
+      font-size: 0.55em;
       letter-spacing: 0.12em;
       font-weight: 700;
       margin-bottom: 0.7em;
@@ -87,10 +87,10 @@
       flex: 1;
       box-shadow: 0 10px 30px rgba(62,33,21,0.07);
     }
-    .stat-card .num { font-size: 2.05em; font-weight: 900; color: var(--brown); line-height: 1; font-family: 'Noto Serif TC', serif; }
-    .stat-card .num small { font-size: 0.42em; color: var(--gold-deep); }
-    .stat-card .label { font-size: 0.5em; color: var(--brown-light); margin-top: 14px; line-height: 1.6; font-weight: 500; }
-    .source-note { font-size: 0.4em; color: var(--brown-light); text-align: center; margin-top: 1.1em; opacity: 0.8; }
+    .stat-card .num { font-size: 2.25em; font-weight: 900; color: var(--brown); line-height: 1; font-family: 'Noto Serif TC', serif; }
+    .stat-card .num small { font-size: 0.55em; color: var(--gold-deep); }
+    .stat-card .label { font-size: 0.6em; color: var(--brown); margin-top: 14px; line-height: 1.6; font-weight: 700; }
+    .source-note { font-size: 0.5em; color: var(--brown-light); text-align: center; margin-top: 1.1em; opacity: 0.8; }
 
     /* === 引用金句 === */
     .quote-box {
@@ -99,7 +99,7 @@
       border-radius: 0 14px 14px 0;
       padding: 26px 30px;
       margin: 0.7em 0;
-      font-size: 0.72em;
+      font-size: 0.85em;
       color: var(--brown);
       font-weight: 700;
       line-height: 1.65;
@@ -108,7 +108,7 @@
     }
     .quote-box.dark { background: var(--brown); color: var(--cream); border-left-color: var(--gold); }
     .quote-box.dark b { color: var(--gold); }
-    .quote-author { font-size: 0.5em; color: var(--brown-light); text-align: right; margin-top: 10px; font-weight: 500; font-family: 'Noto Sans TC'; }
+    .quote-author { font-size: 0.6em; color: var(--brown-light); text-align: right; margin-top: 10px; font-weight: 500; font-family: 'Noto Sans TC'; }
 
     /* === 三道防線卡 === */
     .line-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; margin-top: 0.6em; }
@@ -124,11 +124,11 @@
     .line-card .step {
       position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
       background: var(--brown); color: var(--gold); width: 30px; height: 30px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 0.5em;
+      display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 0.6em;
     }
     .line-card img { width: 92px; height: 92px; object-fit: contain; margin: 10px auto 6px; display: block; }
-    .line-card .lc-title { font-size: 0.5em; font-weight: 900; color: var(--brown); font-family: 'Noto Serif TC', serif; margin-bottom: 8px; }
-    .line-card .lc-desc { font-size: 0.38em; color: var(--brown-light); line-height: 1.65; font-weight: 500; }
+    .line-card .lc-title { font-size: 0.65em; font-weight: 900; color: var(--brown); font-family: 'Noto Serif TC', serif; margin-bottom: 8px; }
+    .line-card .lc-desc { font-size: 0.5em; color: var(--brown); line-height: 1.65; font-weight: 500; }
 
     /* === 案例流程 === */
     .flow { display: flex; align-items: stretch; gap: 0; margin-top: 0.6em; }
@@ -145,37 +145,38 @@
     /* === 痛點清單 === */
     .pain-list { list-style: none; padding: 0; margin: 0.4em 0 0; }
     .pain-list li {
-      font-size: 0.5em; padding: 12px 18px; margin-bottom: 10px; font-weight: 500;
-      background: #fff; border-radius: 10px; border-left: 4px solid var(--crimson);
+      font-size: 0.65em; padding: 12px 18px; margin-bottom: 10px; font-weight: 700;
+      background: #fff; border-radius: 10px; border-left: 5px solid var(--crimson);
       box-shadow: 0 4px 14px rgba(62,33,21,0.05);
+      color: var(--brown);
     }
-    .pain-list li b { color: var(--crimson); }
+    .pain-list li b { color: var(--crimson); font-weight: 900; }
 
     /* === CTA 對比 === */
     .cta-vs { display: flex; align-items: center; justify-content: center; gap: 26px; margin: 0.5em 0 0.8em; }
     .cta-price { text-align: center; }
-    .cta-price .ctp-label { font-size: 0.4em; color: var(--brown-light); font-weight: 700; margin-bottom: 6px; }
+    .cta-price .ctp-label { font-size: 0.55em; color: var(--brown-light); font-weight: 700; margin-bottom: 6px; }
     .cta-price .ctp-old { font-size: 1.4em; font-weight: 900; color: var(--brown-light); text-decoration: line-through; font-family: 'Noto Serif TC', serif; }
     .cta-price .ctp-new { font-size: 1.9em; font-weight: 900; color: var(--crimson); font-family: 'Noto Serif TC', serif; }
     .cta-arrow { font-size: 1.6em; color: var(--gold-deep); font-weight: 900; }
     .cta-badge {
       display: inline-block; background: var(--gold); color: var(--brown); font-weight: 900;
-      padding: 8px 22px; border-radius: 30px; font-size: 0.5em; margin-top: 0.3em;
+      padding: 8px 22px; border-radius: 30px; font-size: 0.65em; margin-top: 0.3em;
       box-shadow: 0 6px 18px rgba(255,215,0,0.4);
     }
 
     /* === 封底聯絡 === */
     .end { text-align: center; }
-    .end h1 { font-size: 2.1em; color: var(--cream); }
-    .end .end-sub { color: var(--gold); font-size: 0.6em; font-weight: 700; margin-top: 0.3em; }
+    .end h1 { font-size: 2.4em; color: var(--cream); }
+    .end .end-sub { color: var(--gold); font-size: 0.85em; font-weight: 700; margin-top: 0.3em; }
     .contact-card {
       display: inline-flex; gap: 42px; align-items: center; background: rgba(249,245,240,0.97);
       border-radius: 22px; padding: 34px 46px; margin-top: 1.1em; box-shadow: 0 16px 46px rgba(0,0,0,0.32);
     }
     .qr-box {
-      width: 240px; height: 240px; background: #fff; border-radius: 14px; border: 2px dashed var(--brown-light);
+      width: 260px; height: 260px; background: #fff; border-radius: 14px; border: 2px dashed var(--brown-light);
       display: flex; align-items: center; justify-content: center; text-align: center;
-      font-size: 0.4em; color: var(--brown-light); font-weight: 700; line-height: 1.5;
+      font-size: 0.55em; color: var(--brown-light); font-weight: 700; line-height: 1.5;
       overflow: hidden; padding: 8px;
     }
     .qr-box img { width: 100%; height: 100%; object-fit: contain; display: block; }
@@ -184,7 +185,7 @@
     .mag-spread { display:flex; gap:20px; justify-content:center; align-items:center; height:560px; }
     .mag-spread img { height:100%; width:auto; max-width:46%; object-fit:contain; border-radius:8px;
       box-shadow:0 20px 55px rgba(0,0,0,0.5); }
-    .mag-cap { text-align:center; color:var(--cream); font-size:0.4em; margin-top:0.7em; font-weight:500; opacity:0.85; }
+    .mag-cap { text-align:center; color:var(--cream); font-size:0.6em; margin-top:0.7em; font-weight:500; opacity:0.95; }
 
     /* === 文字雲掃碼面板 === */
     .wc-qr-panel { display:flex !important; flex-direction:row !important; align-items:center; gap:12px; padding:12px 14px !important; }
@@ -195,10 +196,10 @@
     .wc-qr-big { background:#fff; border:1px solid rgba(62,33,21,0.1); border-radius:16px;
       box-shadow:0 8px 24px rgba(62,33,21,0.07); display:flex; flex-direction:column;
       align-items:center; justify-content:center; padding:22px; gap:14px; }
-    .wc-qr-big img { width:300px; height:300px; max-width:88%; border-radius:10px; display:block; }
-    .wc-qr-big-text { font-size:0.5em; font-weight:900; color:var(--brown); text-align:center; line-height:1.5; }
+    .wc-qr-big img { width:320px; height:320px; max-width:92%; border-radius:10px; display:block; }
+    .wc-qr-big-text { font-size:0.65em; font-weight:900; color:var(--brown); text-align:center; line-height:1.5; }
     .wc-qr-big-text b { color:var(--crimson); }
-    .wc-counter { font-size:0.34em; font-weight:700; color:var(--brown-light); text-align:center; }
+    .wc-counter { font-size:0.48em; font-weight:700; color:var(--brown); text-align:center; }
     .wc-counter span[id] { color:var(--gold-deep); font-weight:900; }
 
     /* === 民法修法對照表 === */
@@ -221,22 +222,31 @@
     /* === 單條法案頁（大字版）=== */
     .law-head { display:flex; align-items:center; gap:16px; margin-bottom:0.1em; }
     .law-badge { background:var(--brown); color:var(--gold); font-family:'Noto Serif TC',serif;
-      font-weight:900; font-size:0.5em; padding:8px 18px; border-radius:14px; white-space:nowrap; }
-    .law-new2 { display:inline-block; background:var(--crimson); color:#fff; font-size:0.34em;
+      font-weight:900; font-size:0.68em; padding:8px 18px; border-radius:14px; white-space:nowrap; }
+    .law-new2 { display:inline-block; background:var(--crimson); color:#fff; font-size:0.45em;
       padding:3px 12px; border-radius:14px; font-weight:700; vertical-align:middle; }
     .law-one { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:0.55em; align-items:stretch; }
     .lo-card { background:#fff; border-radius:18px; padding:28px 30px; box-shadow:0 12px 34px rgba(62,33,21,0.09);
       display:flex; flex-direction:column; }
     .lo-before { border-top:7px solid var(--brown-light); }
     .lo-after  { border-top:7px solid var(--gold); }
-    .lo-tag { font-size:0.44em; font-weight:900; letter-spacing:0.04em; margin-bottom:14px; }
-    .lo-before .lo-tag { color:var(--brown-light); }
-    .lo-after  .lo-tag { color:var(--gold-deep); }
-    .lo-text { font-size:0.52em; line-height:1.75; color:var(--brown); font-weight:500; }
+    .lo-tag {
+      font-size:0.55em;
+      font-weight:900;
+      letter-spacing:0.04em;
+      margin-bottom:14px;
+      display:inline-block;
+      align-self: flex-start;
+      padding: 4px 12px;
+      border-radius: 6px;
+    }
+    .lo-before .lo-tag { background: rgba(164,117,81,0.15); color: var(--brown-light); }
+    .lo-after  .lo-tag { background: rgba(201,162,39,0.2); color: var(--brown); }
+    .lo-text { font-size:0.65em; line-height:1.75; color:var(--brown); font-weight:500; }
     .lo-text.muted { color:var(--brown-light); font-style:italic; }
-    .lo-after .lo-text b { color:var(--gold-deep); font-weight:900; }
+    .lo-after .lo-text b { color:var(--crimson); font-weight:900; }
     .law-plain { margin-top:0.6em; background:var(--brown); color:var(--cream); border-radius:14px;
-      padding:16px 24px; font-size:0.5em; font-weight:700; line-height:1.6; }
+      padding:16px 24px; font-size:0.68em; font-weight:700; line-height:1.6; }
     .law-plain b { color:var(--gold); }
 
     /* === 影片嵌入 === */
@@ -245,10 +255,10 @@
       background:#000; }
     .video-wrap iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
     .contact-info { text-align: left; }
-    .contact-info .ci-name { font-size: 0.95em; font-weight: 900; color: var(--brown); font-family: 'Noto Serif TC', serif; }
-    .contact-info .ci-title { font-size: 0.5em; color: var(--brown-light); font-weight: 700; margin: 8px 0 16px; }
-    .contact-info .ci-row { font-size: 0.56em; color: var(--brown); margin: 10px 0; font-weight: 500; }
-    .contact-info .ci-row b { color: var(--gold-deep); }
+    .contact-info .ci-name { font-size: 1.25em; font-weight: 900; color: var(--brown); font-family: 'Noto Serif TC', serif; }
+    .contact-info .ci-title { font-size: 0.68em; color: var(--brown-light); font-weight: 700; margin: 8px 0 16px; }
+    .contact-info .ci-row { font-size: 0.72em; color: var(--brown); margin: 12px 0; font-weight: 500; }
+    .contact-info .ci-row b { color: var(--crimson); font-weight: 900; }
 
     /* === 文字雲（亮色版覆寫）=== */
     #slide-wordcloud .wc-q { font-size: 1.15em; margin-bottom: 0.4em; }
@@ -274,7 +284,7 @@
 
     <!-- ===== P1 封面 ===== -->
     <section data-background-image="images/cover.png"
-             data-background-opacity="0.45"
+             data-background-opacity="0.15"
              data-background-size="cover"
              data-background-color="#F9F5F0">
       <div class="cover">
@@ -298,7 +308,7 @@
 
     <!-- ===== P3 一個驚人數字 ===== -->
     <section data-background-image="images/bignum.png"
-             data-background-opacity="0.4"
+             data-background-opacity="0.15"
              data-background-size="cover"
              data-background-color="#F9F5F0">
       <div class="kicker">一個比冰島還大的數字</div>
@@ -324,19 +334,19 @@
     <section id="slide-wordcloud" data-background-color="#F9F5F0">
       <div class="kicker">現場互動 · 拿出手機掃碼，一起說出心裡話</div>
       <h2 class="wc-q" style="text-align:center;">說到「把財產留給家人」，<br>您第一個浮現的<span style="color:var(--crimson)">擔心</span>是什麼？</h2>
-      <div class="wc-wrap" style="grid-template-columns:380px 1fr;">
+      <div class="wc-wrap" style="grid-template-columns:400px 1fr;">
         <!-- 左：放大版掃碼面板 -->
         <div class="wc-qr-big">
           <img src="images/wc_qr.png" alt="掃碼用手機輸入">
-          <div class="wc-qr-big-text">📱 拿出手機<b>掃我</b><br>用手機即時輸入</div>
+          <div class="wc-qr-big-text">📱 請使用手機 <b>LINE</b><br>點選右上角<b>「掃描」</b>功能<br>掃描上方條碼即可參與</div>
           <div class="wc-counter">已收集 <span id="wc-total">0</span> 則 · <span id="wc-unique">0</span> 種擔心 <span class="live-tag">LIVE</span></div>
         </div>
         <!-- 右：大文字雲 -->
         <div class="wc-canvas-wrap">
           <canvas id="wc-canvas" style="width:100%; height:100%; display:block;"></canvas>
           <div id="wc-empty" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-               color:var(--brown-light); font-size:0.42em; text-align:center; pointer-events:none; line-height:2;">
-            拿起手機掃左邊 QR<br>大家的擔心就會浮現 ✨
+               color:var(--brown); font-size:0.55em; font-weight:700; text-align:center; pointer-events:none; line-height:2;">
+            打開 LINE 掃描左邊條碼<br>輸入後，您的擔心就會出現在這裡 ✨
           </div>
         </div>
       </div>
@@ -363,7 +373,7 @@
 
     <!-- ===== P5 講師介紹 ===== -->
     <section data-background-image="images/teacher.png"
-             data-background-opacity="0.35"
+             data-background-opacity="0.12"
              data-background-size="cover"
              data-background-color="#F9F5F0">
       <div class="kicker">講師介紹 · 我為什麼叫 RICH</div>
@@ -379,7 +389,7 @@
         </div>
       </div>
       <div class="quote-box">
-        信託<b style="color:var(--gold-deep)">不會改變</b>你的生活，<br>信託讓你的生活<b style="color:var(--gold-deep)">不會被改變</b>。
+        豐盛富足(RICH)的人生，<br>關鍵是<b style="color:var(--gold-deep)">永遠擁有選擇</b>。
       </div>
     </section>
 
@@ -527,7 +537,7 @@
 
     <!-- ===== P9 行動呼籲 ===== -->
     <section data-background-image="images/cta.png"
-             data-background-opacity="0.4"
+             data-background-opacity="0.15"
              data-background-size="cover"
              data-background-color="#F9F5F0">
       <div style="text-align:center;">
@@ -553,7 +563,7 @@
 
     <!-- ===== P10 封底 / 聯絡 ===== -->
     <section data-background-image="images/ending.png"
-             data-background-opacity="0.55"
+             data-background-opacity="0.25"
              data-background-size="cover"
              data-background-color="#3E2115">
       <div class="end">
